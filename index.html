@@ -362,7 +362,11 @@ const photos = [
   '20260505_213602.jpg','20260505_213619.jpg','20260505_213621.jpg',
   '20260505_213718.jpg','20260505_213724.jpg','20260505_222922.jpg',
   '20260505_222924.jpg','20260505_222926.jpg','20260505_222932.jpg',
-  '20260505_222936.jpg','20260505_222938.jpg'
+  '20260505_222936.jpg','20260505_222938.jpg',
+  // Novas memorias (copias otimizadas para carregamento na web)
+  ...Array.from({ length: 86 }, (_, i) =>
+    `novas-fotos/foto-${String(i + 1).padStart(3, '0')}.jpg`
+  )
 ];
 
 const grid = document.getElementById('gallery');
